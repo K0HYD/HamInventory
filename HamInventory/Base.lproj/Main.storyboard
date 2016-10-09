@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16B2338c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b1Q-jP-uvq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HamInventory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +20,84 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bvi-DZ-Fcj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bU4-o3-cAd">
+                            <connections>
+                                <segue destination="nAN-gn-0NL" kind="show" id="V9B-fT-XEN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0GT-fc-C6q">
+            <objects>
+                <viewController id="nAN-gn-0NL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ktT-8X-ip4"/>
+                        <viewControllerLayoutGuide type="bottom" id="p5Y-8L-gB0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FBu-nl-Mgw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-Jt-8Hf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="S78-kK-hv1"/>
+                                    <constraint firstAttribute="width" constant="280" id="Tc9-AQ-Jyo"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxA-MA-ngf">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-GY-NUX">
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WxA-MA-ngf" firstAttribute="top" secondItem="PCD-Jt-8Hf" secondAttribute="bottom" constant="16" id="9r7-Co-c2w"/>
+                            <constraint firstItem="WxA-MA-ngf" firstAttribute="width" secondItem="PCD-Jt-8Hf" secondAttribute="width" id="OzF-tW-xne"/>
+                            <constraint firstItem="xOx-GY-NUX" firstAttribute="top" secondItem="WxA-MA-ngf" secondAttribute="bottom" constant="5" id="Z8i-Gu-PDr"/>
+                            <constraint firstItem="xOx-GY-NUX" firstAttribute="centerX" secondItem="FBu-nl-Mgw" secondAttribute="centerX" id="gA1-ri-7se"/>
+                            <constraint firstItem="WxA-MA-ngf" firstAttribute="centerX" secondItem="FBu-nl-Mgw" secondAttribute="centerX" id="odq-Lh-P8J"/>
+                            <constraint firstItem="PCD-Jt-8Hf" firstAttribute="centerX" secondItem="FBu-nl-Mgw" secondAttribute="centerX" id="sWK-3r-KIR"/>
+                            <constraint firstItem="PCD-Jt-8Hf" firstAttribute="top" secondItem="ktT-8X-ip4" secondAttribute="bottom" constant="20" id="wev-6D-qF4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2VQ-ws-Jc8">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="7A6-F1-wbW"/>
+                            <barButtonItem title="Photos" id="aQP-nD-uzS"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3g0-FS-DlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="80C-XB-Dlx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1Q-jP-uvq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yrs-t0-kEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aWJ-qi-Ud0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3n-O0-EoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="777.66116941529242"/>
         </scene>
     </scenes>
 </document>
