@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HamInventory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="HamInventory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,7 +18,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ArE-S2-vFn">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ArE-S2-vFn" secondAttribute="bottom" id="KbW-Mg-S4X"/>
+                            <constraint firstItem="ArE-S2-vFn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Uum-T8-HNN"/>
+                            <constraint firstItem="ArE-S2-vFn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VSp-dg-yk9"/>
+                            <constraint firstAttribute="trailing" secondItem="ArE-S2-vFn" secondAttribute="trailing" id="jQw-Rp-0nH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bvi-DZ-Fcj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bU4-o3-cAd">
@@ -27,15 +38,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ArE-S2-vFn" id="FGc-45-VjG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Equipment View Controller-->
         <scene sceneID="0GT-fc-C6q">
             <objects>
-                <viewController id="nAN-gn-0NL" sceneMemberID="viewController">
+                <viewController id="nAN-gn-0NL" customClass="EquipmentViewController" customModule="HamInventory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ktT-8X-ip4"/>
                         <viewControllerLayoutGuide type="bottom" id="p5Y-8L-gB0"/>
@@ -44,19 +58,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-Jt-8Hf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marseille-8294.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-Jt-8Hf">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="158" id="S78-kK-hv1"/>
                                     <constraint firstAttribute="width" constant="280" id="Tc9-AQ-Jyo"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxA-MA-ngf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Name of your equipment here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxA-MA-ngf">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-GY-NUX">
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="nAN-gn-0NL" eventType="touchUpInside" id="c3c-pF-hSe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,10 +89,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="2VQ-ws-Jc8">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="7A6-F1-wbW"/>
-                            <barButtonItem title="Photos" id="aQP-nD-uzS"/>
+                            <barButtonItem systemItem="camera" id="7A6-F1-wbW">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="nAN-gn-0NL" id="kkW-Yb-G5x"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="aQP-nD-uzS">
+                                <connections>
+                                    <action selector="photosTapped:" destination="nAN-gn-0NL" id="JMd-Rz-vsT"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="equipmentImageView" destination="PCD-Jt-8Hf" id="hEJ-TY-rMB"/>
+                        <outlet property="titleTextField" destination="WxA-MA-ngf" id="Mji-JL-Usn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3g0-FS-DlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,4 +129,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="777.66116941529242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Marseille-8294.jpg" width="1024" height="339"/>
+    </resources>
 </document>

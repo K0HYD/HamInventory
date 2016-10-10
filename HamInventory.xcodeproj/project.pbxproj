@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0514791DAABBF70062784A /* Marseille-8294.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD0514781DAABBF70062784A /* Marseille-8294.jpg */; };
+		DD05147D1DAAC2990062784A /* EquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD05147C1DAAC2990062784A /* EquipmentViewController.swift */; };
 		DD3055311DA5F3E000700721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3055301DA5F3E000700721 /* AppDelegate.swift */; };
 		DD3055331DA5F3E000700721 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3055321DA5F3E000700721 /* ViewController.swift */; };
 		DD3055361DA5F3E000700721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3055341DA5F3E000700721 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0514781DAABBF70062784A /* Marseille-8294.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Marseille-8294.jpg"; sourceTree = "<group>"; };
+		DD05147C1DAAC2990062784A /* EquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
 		DD30552D1DA5F3E000700721 /* HamInventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HamInventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3055301DA5F3E000700721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD3055321DA5F3E000700721 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		DD30552F1DA5F3E000700721 /* HamInventory */ = {
 			isa = PBXGroup;
 			children = (
+				DD0514781DAABBF70062784A /* Marseille-8294.jpg */,
 				DD3055301DA5F3E000700721 /* AppDelegate.swift */,
 				DD3055321DA5F3E000700721 /* ViewController.swift */,
 				DD3055341DA5F3E000700721 /* Main.storyboard */,
@@ -63,6 +68,7 @@
 				DD30553C1DA5F3E000700721 /* LaunchScreen.storyboard */,
 				DD30553F1DA5F3E000700721 /* Info.plist */,
 				DD3055371DA5F3E000700721 /* HamInventory.xcdatamodeld */,
+				DD05147C1DAAC2990062784A /* EquipmentViewController.swift */,
 			);
 			path = HamInventory;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 				DD30553E1DA5F3E000700721 /* LaunchScreen.storyboard in Resources */,
 				DD30553B1DA5F3E000700721 /* Assets.xcassets in Resources */,
 				DD3055361DA5F3E000700721 /* Main.storyboard in Resources */,
+				DD0514791DAABBF70062784A /* Marseille-8294.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +150,7 @@
 				DD3055391DA5F3E000700721 /* HamInventory.xcdatamodeld in Sources */,
 				DD3055331DA5F3E000700721 /* ViewController.swift in Sources */,
 				DD3055311DA5F3E000700721 /* AppDelegate.swift in Sources */,
+				DD05147D1DAAC2990062784A /* EquipmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +314,7 @@
 				DD3055441DA5F3E000700721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
